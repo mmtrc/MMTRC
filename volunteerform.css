@@ -1,0 +1,201 @@
+﻿:root {
+    --gold: #fec940;
+    --gold-dark: #fdb825;
+    --sage: #819d75;
+    --forest: #465f4b;
+    --crimson: #1a231c; /* NOTE: Was likely a typo – 'la231c'. Replaced with '1a231c' */
+    --rose-dust: #bd8c5e;
+    --rich-brown: #694527;
+    --clay: #8b5e3b;
+    --coffee: #44321b;
+    --dusty-rose: #c38e80;
+    --peachy-nude: #c4967d;
+    /* Existing ones, if not already declared */
+    --dark-brown: #2c1b0f;
+    --cream: #f8f4ec;
+    --medium-brown: #8b5e3b;
+}
+
+
+
+/* General Styles */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--dark-brown);
+    color: #fef3c7;
+    margin: 0;
+    padding: 80px 20px;
+    text-align: center;
+    background-size: 100px 100px;
+    background-repeat: repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+/* Form Card */
+.form-card {
+    background: #c38e8e;
+    border: 3px solid var(--gold);
+    border-radius: 10px;
+    box-shadow: 0 0 10px var(--gold), 0 0 20px rgba(255, 217, 0, 0.5);
+    padding: 40px 50px;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+
+/* Spacing for Form Groups */
+.form-group {
+    text-align: left;
+    padding-bottom: 20px;
+}
+
+/* Label Alignment */
+label {
+    display: block;
+    margin-bottom: 8px;
+    width: 100%;
+    text-align: left;
+    margin-right: 20px;
+}
+
+/* Form Inputs */
+.form-input,
+textarea {
+    width: 100%;
+    padding: 16px 20px;
+    margin-bottom: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: var(--cream);
+}
+
+/* Submit Button */
+.btn-submit,
+.btn-yellow {
+    background: var(--medium-brown);
+    color: var(--gold);
+    padding: 18px 48px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.3rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    margin-top: 20px;
+}
+
+    .btn-submit:hover,
+    .btn-yellow:hover {
+        background: var(--gold);
+        color: var(--medium-brown);
+    }
+
+/* Adjusted Grid Spacing for Form Layout */
+.grid {
+    gap: 16px;
+}
+
+/* Column-based Layout for Inputs */
+.md\:grid-cols-2 {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+/* Spacing for form sections */
+.mb-6 {
+    margin-bottom: 20px;
+}
+
+/* Right-Aligned Grid Layout */
+.grid-right-aligned {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 16px;
+    align-items: flex-start;
+}
+
+    .grid-right-aligned label {
+        text-align: right;
+        min-width: 150px;
+        margin-bottom: 0;
+        padding-right: 12px;
+    }
+
+    /* Make the second column stack elements vertically */
+    .grid-right-aligned > div {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        align-items: flex-start;
+    }
+
+    /* Form Input Sizing */
+    .grid-right-aligned .form-input,
+    .grid-right-aligned textarea,
+    .grid-right-aligned input[type="text"],
+    .grid-right-aligned input[type="date"] {
+        width: 100%;
+        flex: 1;
+    }
+
+/* Checkboxes & Radios */
+input[type="checkbox"],
+input[type="radio"] {
+    margin-right: 10px;
+}
+
+/* Checkbox / Radio Label Styling */
+.checkbox-group,
+.radio-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+    .checkbox-group label,
+    .radio-group label {
+        display: flex;
+        align-items: center;
+    }
+
+/* Title Styling */
+h1 {
+    margin-bottom: 24px;
+    color: var(--gold);
+}
+
+/* Textarea */
+textarea {
+    resize: vertical;
+}
+
+.btn-yellow {
+    background-color: var(--gold);
+    color: var(--dark-brown);
+    border: 2px solid var(--gold-dark);
+}
+
+    .btn-yellow:hover {
+        background-color: var(--gold-dark);
+        color: var(--cream);
+    }
+
+
+/* Responsive Fixes */
+@media (max-width: 600px) {
+    .grid-right-aligned {
+        grid-template-columns: 1fr;
+    }
+
+        .grid-right-aligned label {
+            text-align: left;
+            padding-right: 0;
+            margin-bottom: 8px;
+        }
+
+        .grid-right-aligned > div {
+            align-items: stretch;
+        }
+}

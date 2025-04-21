@@ -1,0 +1,136 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Volunteer Sign-Up</title>
+    <link href="volunteerform.css" rel="stylesheet">
+</head>
+<body class="min-h-screen flex items-center justify-center p-6 bg-lightgray">
+
+    <form id="volunteerForm" class="form-card">
+        <h1 class="text-4xl font-bold text-center highlight mb-6">🏠 Volunteer to Defend Housing Rights!</h1>
+        <p class="text-center text-yellow-200 text-lg mb-6">
+            🔥 Tenants in Lansing face eviction, unsafe housing, and predatory landlords. You can make a difference.
+        </p>
+
+        <!-- Contact Info -->
+        <div class="grid-right-aligned mb-6">
+            <label for="name">Full Name *</label>
+            <input type="text" id="name" name="name" required class="form-input" />
+        </div>
+        <div class="grid-right-aligned mb-6">
+            <label for="phone">Phone Number *</label>
+            <input type="tel" id="phone" name="phone" required class="form-input" />
+        </div>
+        <div class="grid-right-aligned mb-6">
+            <label for="email">Email *</label>
+            <input type="email" id="email" name="email" required class="form-input" />
+        </div>
+
+        <!-- Preferred Contact Method -->
+        <div class="grid-right-aligned mb-6">
+            <label>Preferred Contact Method:</label>
+            <div class="flex flex-col gap-2 mt-2">
+                <label><input type="checkbox" name="contact[]" value="Phone"> Phone</label>
+                <label><input type="checkbox" name="contact[]" value="Email"> Email</label>
+                <label><input type="checkbox" name="contact[]" value="Text"> Text</label>
+            </div>
+        </div>
+
+        <!-- Availability Frequency -->
+        <div class="grid-right-aligned mb-6">
+            <label>How often can you help?</label>
+            <div class="flex flex-col gap-2 mt-2">
+                <label><input type="checkbox" name="frequency[]" value="One-time"> One-time</label>
+                <label><input type="checkbox" name="frequency[]" value="Weekly"> Weekly</label>
+                <label><input type="checkbox" name="frequency[]" value="Monthly"> Monthly</label>
+                <label><input type="checkbox" name="frequency[]" value="On-call"> On-call</label>
+            </div>
+        </div>
+
+        <!-- Days Available -->
+        <div class="grid-right-aligned mb-6">
+            <label>What days are you available?</label>
+            <div class="flex flex-col gap-2 mt-2">
+                <label><input type="checkbox" name="days[]" value="Monday"> Monday</label>
+                <label><input type="checkbox" name="days[]" value="Tuesday"> Tuesday</label>
+                <label><input type="checkbox" name="days[]" value="Wednesday"> Wednesday</label>
+                <label><input type="checkbox" name="days[]" value="Thursday"> Thursday</label>
+                <label><input type="checkbox" name="days[]" value="Friday"> Friday</label>
+                <label><input type="checkbox" name="days[]" value="Saturday"> Saturday</label>
+                <label><input type="checkbox" name="days[]" value="Sunday"> Sunday</label>
+            </div>
+        </div>
+
+        <!-- Time Slots -->
+        <div class="grid-right-aligned mb-6">
+            <label>Preferred Time Slots:</label>
+            <div class="flex flex-col gap-2 mt-2">
+                <label><input type="checkbox" name="times[]" value="Mornings"> Mornings</label>
+                <label><input type="checkbox" name="times[]" value="Afternoons"> Afternoons</label>
+                <label><input type="checkbox" name="times[]" value="Evenings"> Evenings</label>
+            </div>
+        </div>
+
+        <!-- Roles -->
+        <div class="grid-right-aligned mb-6">
+            <label>What roles are you interested in?</label>
+            <div class="flex flex-col gap-2 mt-2">
+                <label><input type="checkbox" name="roles[]" value="Court Support"> Court Support</label>
+                <label><input type="checkbox" name="roles[]" value="Outreach & Canvassing"> Outreach & Canvassing</label>
+                <label><input type="checkbox" name="roles[]" value="Tenant Intake & Support"> Tenant Intake & Support</label>
+                <label><input type="checkbox" name="roles[]" value="Research & Policy Advocacy"> Research & Policy Advocacy</label>
+                <label><input type="checkbox" name="roles[]" value="Social Media & Communications"> Social Media & Communications</label>
+                <label><input type="checkbox" name="roles[]" value="Fundraising & Event Planning"> Fundraising & Event Planning</label>
+                <label>
+                    <input type="checkbox" name="roles[]" value="Other"> Other:
+                    <input type="text" name="role_other" class="rounded p-2 ml-2 w-full" />
+                </label>
+            </div>
+        </div>
+
+        <!-- Skills and Languages -->
+        <div class="grid-right-aligned mb-6">
+            <label>Do you have any relevant skills or experience?</label>
+            <textarea name="experience" rows="4" class="w-full rounded-lg p-3 mt-2"></textarea>
+        </div>
+
+        <div class="grid-right-aligned mb-6">
+            <label>Languages spoken (besides English):</label>
+            <input type="text" name="languages" class="w-full rounded-lg p-3 mt-2" />
+        </div>
+
+        <!-- Signature and Date -->
+        <div class="grid sm:grid-cols-2 gap-6 mb-6">
+            <label>
+                Signature:
+                <input type="text" name="signature" class="w-full rounded-lg p-3 mt-2" />
+            </label>
+            <label>
+                Date:
+                <input type="date" name="date" class="w-full rounded-lg p-3 mt-2" />
+            </label>
+        </div>
+
+        <div class="mb-6">
+            <label>Printed Name:</label>
+            <input type="text" name="printed_name" class="w-full rounded-lg p-3 mt-2" />
+        </div>
+
+        <!-- Submit -->
+        <div class="text-center pt-6">
+            <button type="submit" class="btn-yellow px-8 py-4 rounded-full font-bold text-lg shadow-lg">
+                🚀 Sign Up Now!
+            </button>
+        </div>
+    </form>
+
+    <!-- JavaScript -->
+    <script src="scripts.js"></script>
+
+</body>
+</html>
+
+
+
