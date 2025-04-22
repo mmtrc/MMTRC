@@ -353,16 +353,16 @@ footer {
     }
 
     nav a {
-    display: inline-block; /* or 'flex' if you need icon + text inside */
-    padding: 12px 18px;
-    font-size: 1.2rem;
-    text-align: center;
-    text-decoration: none;
-    color: #fec940;
-    font-family: 'Inter', sans-serif;
-    border: 2px solid transparent;
-    border-radius: 5px;
-}
+        display: block;
+        padding: 12px 18px;
+        font-size: 1.1rem;
+        color: #fec940;
+        text-decoration: none;
+        border: 2px solid transparent;
+        border-radius: 5px;
+        width: auto; /* keep this so it hugs content */
+    }
+
     nav a i {
     color: #694527 !important;
 }
