@@ -2,7 +2,7 @@
 body {
     font-family: 'Inter', sans-serif;
     background-color: #44321b;
-    color: #fef3c7; /* Changed text color to light cream */
+    color: #fef3c7;
     margin: 0;
     padding: 0;
     text-align: center;
@@ -36,6 +36,7 @@ header {
     height: 150px;
     position: relative;
     z-index: 9;
+    width: 100%;
 }
 
 /* Navigation */
@@ -47,49 +48,50 @@ nav {
     padding: 15px 0;
     position: relative;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    width: 100%;
 }
 
-    nav a {
-        position: relative;
-        color: #fec940;
-        text-decoration: none;
-        padding: 12px 18px;
-        font-weight: bold;
-        transition: color 0.3s ease-in-out;
-        border: 2px solid transparent;
-        border-radius: 5px;
-        font-family: 'Inter', sans-serif;
-    }
+nav a {
+    position: relative;
+    color: #fec940;
+    text-decoration: none;
+    padding: 12px 18px;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    font-family: 'Inter', sans-serif;
+}
 
-        nav a::before,
-        nav a::after {
-            content: "";
-            position: absolute;
-            left: 50%;
-            width: 0%;
-            height: 2px;
-            background: #fec940;
-            transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
-        }
+nav a::before,
+nav a::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    width: 0%;
+    height: 2px;
+    background: #fec940;
+    transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+}
 
-        nav a::before {
-            top: 0;
-        }
+nav a::before {
+    top: 0;
+}
 
-        nav a::after {
-            bottom: 0;
-        }
+nav a::after {
+    bottom: 0;
+}
 
-        nav a:hover {
-            color: #819d75;
-            border-color: #fec940;
-        }
+nav a:hover {
+    color: #819d75;
+    border-color: #fec940;
+}
 
-            nav a:hover::before,
-            nav a:hover::after {
-                width: 100%;
-                left: 0;
-            }
+nav a:hover::before,
+nav a:hover::after {
+    width: 100%;
+    left: 0;
+}
 
 /* Main Content */
 .container {
@@ -97,7 +99,7 @@ nav {
     max-width: 900px;
     margin: 30px auto;
     background: #8b5e3b;
-    color: #fef3c7; /* Changed text color to light cream */
+    color: #fef3c7;
     padding: 25px;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
@@ -126,19 +128,19 @@ nav {
     font-family: 'Inter', sans-serif;
 }
 
-    #needs-assessment-form input,
-    #needs-assessment-form select,
-    #contact-form input,
-    #contact-form select {
-        padding: 12px;
-        margin-bottom: 10px;
-        border-radius: 5px;
-        border: 2px solid #fec940;
-        background-color: #44321B;
-        color: #fef3c7; /* Changed input text color to light cream */
-        width: 100%;
-        font-family: 'Inter', sans-serif;
-    }
+#needs-assessment-form input,
+#needs-assessment-form select,
+#contact-form input,
+#contact-form select {
+    padding: 12px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 2px solid #fec940;
+    background-color: #44321B;
+    color: #fef3c7;
+    width: 100%;
+    font-family: 'Inter', sans-serif;
+}
 
 /* Submit Button */
 .submit-btn {
@@ -153,10 +155,10 @@ nav {
     font-family: 'Inter', sans-serif;
 }
 
-    .submit-btn:hover {
-        background-color: #fec940;
-        color: #694527;
-    }
+.submit-btn:hover {
+    background-color: #fec940;
+    color: #694527;
+}
 
 /* Required Field */
 .required {
@@ -224,10 +226,10 @@ footer {
     padding: 3px;
 }
 
-    .window div {
-        background-color: #fff;
-        border-radius: 3px;
-    }
+.window div {
+    background-color: #fff;
+    border-radius: 3px;
+}
 
 /* Glass Text Overlay */
 .door .glassEffect {
@@ -252,29 +254,28 @@ footer {
     gap: 10px;
     position: relative;
     flex-direction: row;
-    z-index: 10; /* Ensures the text stays above other elements */
+    z-index: 10;
 }
 
-    .doorTextWrapper .doorText {
-        font-size: 14px;
-        color: #694527;
-        line-height: 1.4;
-        position: absolute;
-        bottom: -55px; /* Adjust this value to move text down */
-        right: -50px;
-        z-index: 20; /* Ensure text stays on top */
-    }
+.doorTextWrapper .doorText {
+    font-size: 14px;
+    color: #694527;
+    line-height: 1.4;
+    position: absolute;
+    bottom: -55px;
+    right: -50px;
+    z-index: 20;
+}
 
-/* Ensuring hover doesn't affect text visibility */
 .door:hover .doorTextWrapper .doorText {
-    visibility: visible; /* Keeps the text visible when hovered */
+    visibility: visible;
 }
 
 .door-handle {
     width: 15px;
     height: 15px;
-    background-color: #694527; /* color for the handle */
-    border-radius: 50%; /* This makes it a circle */
+    background-color: #694527;
+    border-radius: 50%;
     position: absolute;
     bottom: -25px;
     right: 50%;
@@ -321,13 +322,51 @@ footer {
 .resources,
 .need-help,
 .volunteer-form {
-    color: #fef3c7; /* Light cream text color */
+    color: #fef3c7;
     font-family: 'Inter', sans-serif;
 }
 
 /* Khadja Content Section */
 .khadja-content {
-    background-color: #8b5e3b; /* Use a deep brown */
-    /* Other styles for this section */
+    background-color: #8b5e3b;
+}
+
+/* Responsive Mobile Styles */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding: 30px 10px;
+        font-size: 2rem;
+        height: auto;
+        text-align: center;
+    }
+
+    .trc-logo {
+        height: 180px;
+        margin-bottom: 10px;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 15px;
+        padding: 10px 0;
+    }
+
+    nav a {
+        display: block;
+        width: 100%;
+        text-align: center;
+        padding: 15px;
+        font-size: 1.2rem;
+    }
+
+    .backDoor {
+        top: 100px;
+        right: 10px;
+    }
+
+    .side-icons {
+        display: none;
+    }
 }
 
