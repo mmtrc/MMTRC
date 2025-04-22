@@ -363,6 +363,10 @@ footer {
     border: 2px solid transparent;
     border-radius: 5px;
 }
+    nav a i {
+    color: #694527 !important;
+}
+
     }
 
     .backDoor {
