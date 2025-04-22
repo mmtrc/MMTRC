@@ -40,7 +40,6 @@ header {
 }
 
 /* Navigation */
-/* Make sure the nav wraps full width */
 nav {
     display: flex;
     justify-content: center;
@@ -50,7 +49,6 @@ nav {
     position: relative;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
-
 /* Reset parent containers if necessary */
 header, .nav-wrapper, .nav-container {
     width: 100%;
