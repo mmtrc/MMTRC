@@ -331,3 +331,71 @@ footer {
     background-color: #8b5e3b; /* Use a deep brown */
     /* Other styles for this section */
 }
+/* Responsive Styles */
+@media (max-width: 768px) {
+    header {
+        font-size: 2rem;
+        padding: 30px 0;
+        height: auto;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .trc-logo {
+        height: 180px;
+        margin-bottom: 15px;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px;
+    }
+
+    .container {
+        width: 95%;
+        margin: 20px auto;
+        padding: 15px;
+    }
+
+    #form-section {
+        padding: 20px;
+    }
+
+    #needs-assessment-form input,
+    #needs-assessment-form select,
+    #contact-form input,
+    #contact-form select {
+        font-size: 1rem;
+    }
+
+    .submit-btn {
+        font-size: 1rem;
+        padding: 10px;
+    }
+
+    .backDoor {
+        position: fixed;
+        top: unset;
+        bottom: 10px;
+        right: 10px;
+    }
+
+    .door {
+        width: 100px;
+        height: 150px;
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    .doorTextWrapper .doorText {
+        bottom: -45px;
+        right: -35px;
+        font-size: 12px;
+    }
+
+    .side-icons {
+        display: none; /* hide decorative icons on small screens for clarity */
+    }
+}
+
