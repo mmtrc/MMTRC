@@ -13,6 +13,12 @@ body {
     background-position: center;
 }
 
+.trc-logo {
+    height: 270px;
+    margin-right: 5px;
+    vertical-align: middle;
+}
+
 /* Header */
 header {
     background: linear-gradient(135deg, #465f4b, #819d75);
