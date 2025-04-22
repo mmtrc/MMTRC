@@ -334,11 +334,17 @@ footer {
 /* Ensure header and nav stretch full width */
 header,
 nav {
-    width: 100vw;
-    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    background: #694527;
+    padding: 15px 0;
+    position: relative;
+    width: 100vw; /* Force it to span entire viewport width */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     margin: 0;
-    padding: 0;
 }
+
 
 /* Responsive tweaks */
 @media screen and (max-width: 768px) {
