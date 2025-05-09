@@ -20,7 +20,7 @@ document.getElementById("volunteerForm").addEventListener("submit", async functi
 
   try {
     // Send data to Google Apps Script
-    const response = await fetch("https://script.google.com/macros/s/AKfycbwCmhcvVPS_Q8bI55aZ3CZAxG68npmRXfNIHMBt78LUgeJRCE3XQQgFIUBJ0DNr1g8/exec", {
+    const response = await fetch("https://script.google.com/a/macros/trcmm.org/s/AKfycbwCmhcvVPS_Q8bI55aZ3CZAxG68npmRXfNIHMBt78LUgeJRCE3XQQgFIUBJ0DNr1g8/exec", {
       method: "POST",
       body: JSON.stringify(data),
       headers: {
