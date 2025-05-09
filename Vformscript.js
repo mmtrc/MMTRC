@@ -1,27 +1,25 @@
 document.getElementById("volunteerForm").addEventListener("submit", async function (e) {
-  e.preventDefault();
+  e.preventDefault(); // Prevent default form submission
 
-  const form = e.target;
-  const formData = new FormData(form);
+  const formData = new FormData(e.target); // Collect form data
   const data = {};
 
-  // Convert formData into a JSON-ready object
-  for (let [key, value] of formData.entries()) {
-    if (key.endsWith("[]")) {
-      key = key.slice(0, -2); // Remove []
-      if (!data[key]) data[key] = [];
-      data[key].push(value);
-    } else if (data[key]) {
-      // Already exists, convert to array
-      if (!Array.isArray(data[key])) data[key] = [data[key]];
-      data[key].push(value);
+  formData.forEach((value, key) => {
+    if (data[key]) {
+      // If the key already exists (for checkbox arrays), append the value
+      if (Array.isArray(data[key])) {
+        data[key].push(value);
+      } else {
+        data[key] = [data[key], value];
+      }
     } else {
       data[key] = value;
     }
-  }
+  });
 
   try {
-    const response = await fetch("https://script.google.com/macros/s/AKfycbwCmhcvVPS_Q8bI55aZ3CZAxG68npmRXfNIHMBt78LUgeJRCE3XQQgFIUBJ0DNr1g8/exec", {  // Replace with your actual Google Apps Script URL
+    // Send data to Google Apps Script
+    const response = await fetch("https://script.google.com/macros/s/AKfycbwCmhcvVPS_Q8bI55aZ3CZAxG68npmRXfNIHMBt78LUgeJRCE3XQQgFIUBJ0DNr1g8/exec", {
       method: "POST",
       body: JSON.stringify(data),
       headers: {
@@ -30,15 +28,14 @@ document.getElementById("volunteerForm").addEventListener("submit", async functi
     });
 
     const result = await response.json();
-    if (result.success || result.result === "success") {
-      alert("🎉 Thank you for volunteering! We'll be in touch soon.");
-      form.reset();
+    if (result.status === "success") {
+      alert("Thank you for signing up!");
     } else {
-      alert("⚠️ Something went wrong. Please try again.");
+      alert("There was an issue. Please try again.");
     }
   } catch (error) {
     console.error("Error submitting form:", error);
-    alert("❌ Submission failed. Please check your connection and try again.");
+    alert("There was an error submitting the form.");
   }
 });
 
