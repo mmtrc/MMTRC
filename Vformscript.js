@@ -21,7 +21,7 @@ document.getElementById("volunteerForm").addEventListener("submit", async functi
   }
 
   try {
-    const response = await fetch("<https://script.google.com/a/macros/trcmm.org/s/AKfycbwCmhcvVPS_Q8bI55aZ3CZAxG68npmRXfNIHMBt78LUgeJRCE3XQQgFIUBJ0DNr1g8/exec>", {  // Replace with your actual Google Apps Script URL
+    const response = await fetch("https://script.google.com/macros/library/d/140GLh1JbCmb9-kDuAteTAtCUzsIdyVg7hcGXZqcfmdnw_bgG_w8qbIe1/3", {  // Replace with your actual Google Apps Script URL
       method: "POST",
       body: JSON.stringify(data),
       headers: {
