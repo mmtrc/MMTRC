@@ -1,42 +1,27 @@
-document.getElementById('volunteerForm').addEventListener('submit', async function (e) {
-    e.preventDefault();
+function doPost(e) {
+  const sheet = SpreadsheetApp.openById('1OU7qxTRRafN0Ww-F5dJT0Rox7aJK0dqvndRuVV0oSvw').getSheetByName('volunteerForm');
+  const data = JSON.parse(e.postData.contents);
 
-    const form = e.target;
-    const formData = new FormData(form);
+  sheet.appendRow([
+    new Date(),                          // Timestamp
+    data.name || '',
+    data.phone || '',
+    data.email || '',
+    (data.contact || []).join(', '),
+    (data.frequency || []).join(', '),
+    (data.days || []).join(', '),
+    (data.times || []).join(', '),
+    (data.roles || []).join(', '),
+    data.role_other || '',
+    data.experience || '',
+    data.languages || '',
+    data.signature || '',
+    data.date || '',
+    data.printed_name || ''
+  ]);
 
-    const getValues = (name) => formData.getAll(name);
+  return ContentService.createTextOutput(JSON.stringify({ result: 'success' }))
+    .setMimeType(ContentService.MimeType.JSON);
+}
 
-    const data = {
-        name: formData.get('name'),
-        phone: formData.get('phone'),
-        email: formData.get('email'),
-        contact: getValues('contact[]'),
-        frequency: getValues('frequency[]'),
-        days: getValues('days[]'),
-        times: getValues('times[]'),
-        roles: getValues('roles[]'),
-        role_other: formData.get('role_other'),
-        experience: formData.get('experience'),
-        languages: formData.get('languages'),
-        signature: formData.get('signature'),
-        date: formData.get('date'),
-        printed_name: formData.get('printed_name')
-    };
 
-    try {
-        const response = await fetch('https://script.google.com/a/macros/trcmm.org/s/AKfycbwCmhcvVPS_Q8bI55aZ3CZAxG68npmRXfNIHMBt78LUgeJRCE3XQQgFIUBJ0DNr1g8/exec', {
-            method: 'POST',
-            mode: 'no-cors', // Note: Apps Script doesn't return CORS headers, so this prevents errors but also hides success/failure.
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(data)
-        });
-
-        alert("? Form submitted successfully!");
-        form.reset();
-    } catch (error) {
-        console.error("Submission failed:", error);
-        alert("? Submission failed. Please try again.");
-    }
-});
