@@ -21,7 +21,7 @@ document.getElementById("volunteerForm").addEventListener("submit", async functi
   }
 
   try {
-    const response = await fetch("https://script.google.com/a/macros/trcmm.org/s/AKfycbwCmhcvVPS_Q8bI55aZ3CZAxG68npmRXfNIHMBt78LUgeJRCE3XQQgFIUBJ0DNr1g8/exec", {
+    const response = await fetch("<https://script.google.com/a/macros/trcmm.org/s/AKfycbwCmhcvVPS_Q8bI55aZ3CZAxG68npmRXfNIHMBt78LUgeJRCE3XQQgFIUBJ0DNr1g8/exec>", {  // Replace with your actual Google Apps Script URL
       method: "POST",
       body: JSON.stringify(data),
       headers: {
@@ -41,5 +41,6 @@ document.getElementById("volunteerForm").addEventListener("submit", async functi
     alert("❌ Submission failed. Please check your connection and try again.");
   }
 });
+
 
 
