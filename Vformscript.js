@@ -24,7 +24,7 @@ document.getElementById('volunteerForm').addEventListener('submit', async functi
     };
 
     try {
-        const response = await fetch('https://script.google.com/macros/s/AKfycbz4qOIHTDCH4Lz8NrNdTjIJKl8KS7tQ7GlKm9iz5i1dvTjpKrAVV-zVLELav_-KIQ31JA/exec', {
+        const response = await fetch('https://script.google.com/a/macros/trcmm.org/s/AKfycbx-3q6lhQ88mJqVjB65lcxYpgHAnY3rymuWjNijInEZxGDRctFlF0_4FpbQp8Vh5WnH/exec', {
             method: 'POST',
             mode: 'no-cors', // Note: Apps Script doesn't return CORS headers, so this prevents errors but also hides success/failure.
             headers: {
