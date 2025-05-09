@@ -4,9 +4,10 @@ document.getElementById("volunteerForm").addEventListener("submit", async functi
   const formData = new FormData(e.target); // Collect form data
   const data = {};
 
+  // Loop through form data and populate the data object
   formData.forEach((value, key) => {
+    // Handle checkbox arrays properly
     if (data[key]) {
-      // If the key already exists (for checkbox arrays), append the value
       if (Array.isArray(data[key])) {
         data[key].push(value);
       } else {
@@ -27,15 +28,18 @@ document.getElementById("volunteerForm").addEventListener("submit", async functi
       },
     });
 
+    // Handle the response
     const result = await response.json();
+
     if (result.status === "success") {
-      alert("Thank you for signing up!");
+      alert("Thank you for signing up! Your information has been submitted.");
     } else {
-      alert("There was an issue. Please try again.");
+      alert("There was an issue with your submission. Please try again.");
     }
   } catch (error) {
+    // Log the error for debugging
     console.error("Error submitting form:", error);
-    alert("There was an error submitting the form.");
+    alert("There was an error submitting the form. Please try again later.");
   }
 });
 
