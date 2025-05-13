@@ -401,12 +401,15 @@ footer {
     }
 
 
-    }
 
     .backDoor {
-        top: 100px;
-        right: 30px;
+        position: relative;
+        margin: 20px auto 0 auto; /* Top margin and horizontal centering */
+        top: 0;
+        right: 0;
+        z-index: 1000;
     }
+
 
     .side-icons {
         display: none;
