@@ -197,10 +197,11 @@ footer {
 .backDoor {
     position: fixed;
     top: 150px;
-    right: 0;
+    right: 7px; /* Small buffer from the right edge */
     z-index: 1000;
     transition: top 0.1s ease-out;
 }
+
 
 /* Door Style */
 .door {
@@ -404,7 +405,7 @@ footer {
 
     .backDoor {
         top: 100px;
-        right: 35px;
+        right: 30px;
     }
 
     .side-icons {
