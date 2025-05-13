@@ -194,12 +194,12 @@ footer {
 
 /* Back Door Button */
 .backDoor {
-    position: fixed;
-    top: 150px;
-    right: 7px; /* Small buffer from the right edge */
+    position: relative;
+    margin: 20px auto 0 auto; /* Top margin and horizontal centering */
+    top: 0;
+    right: 0;
     z-index: 1000;
-    transition: top 0.1s ease-out;
-}
+    }
 
 
 
