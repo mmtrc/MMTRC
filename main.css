@@ -365,6 +365,8 @@ footer {
         flex-direction: column;
         gap: 15px;
         padding: 10px 20px;
+        width: 100%;
+        box-sizing: border-box;
     }
 
     nav a {
