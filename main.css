@@ -394,7 +394,6 @@ footer {
 
     .backDoor {
         top: 100px;
-        right: 5vw;   /* Slightly inward from the left edge */
         right: auto; /* Disable right-side positioning */
     }
 
