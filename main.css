@@ -394,7 +394,7 @@ footer {
 
     .backDoor {
         top: 100px;
-        right: auto; /* Disable right-side positioning */
+        right: 10px;
     }
 
     .side-icons {
