@@ -61,43 +61,51 @@ nav a,
     border: none;
     cursor: pointer;
     padding: 10px 16px;
-    transition: background-color 0.3s, color 0.3s;
+    transition: background-color 0.3s, color 0.3s, border-radius 0.3s;
+    border-radius: 12px; /* so there's no snap transition */
 }
 
-/* Dropdown structure */
+/* Dropdown container */
 .dropdown {
     position: relative;
     display: inline-block;
 }
 
+/* Dropdown content menu */
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #44321b; /* dark base for dropdown */
+    background-color: #44321b; /* dropdown background */
     min-width: 200px;
     z-index: 1;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    overflow: hidden;
 }
 
+/* Dropdown menu items */
 .dropdown-content a {
     color: #fec940;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
+    transition: background-color 0.3s, color 0.3s, border-radius 0.3s;
 }
 
-/* Hover behavior */
+/* Hover effects - rounded + green */
 nav a:hover,
 .dropbtn:hover,
 .dropdown-content a:hover {
     background-color: #819d75; /* soft green */
     color: white;
+    border-radius: 12px;
 }
 
-/* Show dropdown */
+/* Show dropdown on hover */
 .dropdown:hover .dropdown-content {
     display: block;
 }
+
 
 
 
