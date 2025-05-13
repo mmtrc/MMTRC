@@ -359,7 +359,9 @@ footer {
 }
 
 
-@media (max-width: 768px) {
+
+/* Responsive */
+@media (max-width: 1024px) {
     header {
         flex-direction: column;
         padding: 30px 20px;
@@ -402,4 +404,5 @@ footer {
         display: none;
     }
 }
+
 
