@@ -267,7 +267,7 @@ footer {
     transform: translateX(50%);
 }
 
-/* Responsive */
+/* Responsive Mobile Styles */
 @media (max-width: 768px) {
     header {
         flex-direction: column;
@@ -286,20 +286,38 @@ footer {
         flex-direction: column;
         gap: 15px;
         padding: 10px 20px;
-        width: 110%;
-        box-sizing: border-box;
     }
 
     nav a {
         display: block;
         padding: 12px 18px;
         font-size: 1.1rem;
+        color: #fec940;
+        text-decoration: none;
+        border: 2px solid transparent;
+        border-radius: 5px;
+        width: auto; /* keep this so it hugs content */
+    }
+     {
+    .side-icons {
+        position: fixed;
+        top: 120px;
+        right: 10px;
+        z-index: 900;
+        pointer-events: all; /* Ensure it's clickable */
+        opacity: 1; /* Make sure it's fully visible */
     }
 
+
+
     .backDoor {
-        top: 100px;
-        right: 30px;
+        position: relative;
+        margin: 20px auto 0 auto; /* Top margin and horizontal centering */
+        top: 0;
+        right: 0;
+        z-index: 1000;
     }
+
 
     .side-icons {
         display: none;
