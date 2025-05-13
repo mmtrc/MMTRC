@@ -266,7 +266,9 @@ footer {
     transform: translateX(50%);
 }
 
-@media (max-width: 768px) {
+
+/* Responsive */
+@media (max-width: 1024px) {
     header {
         flex-direction: column;
         padding: 30px 20px;
@@ -304,14 +306,6 @@ footer {
         display: flex;
         justify-content: center;
     }
-
-    .side-icons {
-        display: none;
-    }
-}
-
-
-   
 
     .side-icons {
         display: none;
