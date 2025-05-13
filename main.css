@@ -266,7 +266,6 @@ footer {
     transform: translateX(50%);
 }
 
-/* Responsive Mobile Styles */
 @media (max-width: 768px) {
     header {
         flex-direction: column;
@@ -284,37 +283,33 @@ footer {
     nav {
         flex-direction: column;
         gap: 15px;
-        padding: 10px 20px;
+        padding: 10px 0;
+        width: 100%;
+        box-sizing: border-box;
+        background-color: #694527;
     }
 
     nav a {
         display: block;
+        width: 100%;
         padding: 12px 18px;
         font-size: 1.1rem;
-        color: #fec940;
-        text-decoration: none;
-        border: 2px solid transparent;
-        border-radius: 5px;
-        width: auto; /* keep this so it hugs content */
+        text-align: center;
+        border-top: 1px solid #8b5e3b;
     }
-     {
-    .side-icons {
-        position: fixed;
-        top: 120px;
-        right: 10px;
-        z-index: 900;
-        pointer-events: all; /* Ensure it's clickable */
-        opacity: 1; /* Make sure it's fully visible */
-    }
-
-
 
     .backDoor {
-        position: relative;
-        top: 0;
-        right: auto;
-        margin: 20px auto;
+        position: static;
+        margin: 30px auto 10px auto;
+        display: flex;
+        justify-content: center;
     }
+
+    .side-icons {
+        display: none;
+    }
+}
+
 
    
 
