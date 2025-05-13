@@ -332,6 +332,15 @@ footer {
     /* Other styles for this section */
 }
 
+.team-photo {
+    width: 200px;
+    height: auto;
+    border-radius: 8px;
+    margin: 10px 0;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+
 /* Responsive Mobile Styles */
 @media (max-width: 768px) {
     header {
