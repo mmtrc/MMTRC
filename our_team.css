@@ -39,50 +39,46 @@ header {
     z-index: 10;
 }
 
-/* Navigation */
-/* NAVBAR STYLES (existing or adjusted to match your theme) */
+/* NAVBAR CONTAINER */
 nav {
     display: flex;
+    justify-content: center; /* centers the items horizontally */
     align-items: center;
-    gap: 15px;
-    background-color: #694527; /* Adjust to match your navbar color */
-    padding: 10px 20px;
+    gap: 20px;
+    background-color: #694527; /* dark brown */
+    padding: 12px 24px;
+    flex-wrap: wrap;
     font-family: inherit;
 }
 
-/* Links in navbar */
-nav a, .dropbtn {
-    color: #fec940; /* TRC gold */
+/* Nav links & dropdown button */
+nav a,
+.dropbtn {
+    color: #fec940; /* gold text */
     text-decoration: none;
     font-size: 1em;
     background: none;
     border: none;
     cursor: pointer;
-    padding: 8px 12px;
+    padding: 10px 16px;
+    transition: background-color 0.3s, color 0.3s;
 }
 
-/* Facebook icon */
-nav a i.fab {
-    font-size: 1.2em;
-}
-
-/* Dropdown container */
+/* Dropdown structure */
 .dropdown {
     position: relative;
     display: inline-block;
 }
 
-/* Dropdown content */
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #44321b;
+    background-color: #44321b; /* dark base for dropdown */
     min-width: 200px;
     z-index: 1;
-    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-/* Dropdown links */
 .dropdown-content a {
     color: #fec940;
     padding: 12px 16px;
@@ -90,16 +86,19 @@ nav a i.fab {
     display: block;
 }
 
-/* Show dropdown on hover */
+/* Hover behavior */
+nav a:hover,
+.dropbtn:hover,
+.dropdown-content a:hover {
+    background-color: #819d75; /* soft green */
+    color: white;
+}
+
+/* Show dropdown */
 .dropdown:hover .dropdown-content {
     display: block;
 }
 
-/* Hover effects */
-nav a:hover, .dropbtn:hover, .dropdown-content a:hover {
-    background-color: #8b5e3b;
-    color: white;
-}
 
 
 /* Main Content */
