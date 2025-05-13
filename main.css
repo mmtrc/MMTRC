@@ -306,6 +306,11 @@ footer {
         display: flex;
         justify-content: center;
     }
+    .door {
+    position: static;
+    margin: 0 auto;
+    }
+
 
     .side-icons {
         display: none;
