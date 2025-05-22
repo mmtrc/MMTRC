@@ -222,8 +222,8 @@ footer {
 
 /* Window Style */
 .window {
-    width: 40px;
-    height: 25px;
+    width: 65px;
+    height: 40px;
     background: #694527;
     border-radius: 1px;
     position: absolute;
