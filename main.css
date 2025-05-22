@@ -275,7 +275,7 @@ footer {
     line-height: 1.4;
     position: absolute;
     padding-top: 20px;
-    bottom: -90px;
+    bottom: -100px;
     right: -50px;
     z-index: 20;
 }
