@@ -403,6 +403,24 @@ footer {
     .side-icons {
         display: none;
     }
+    footer {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px 15px;
+        font-size: 1rem;
+    }
+
+    footer .footer-links {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+    }
+
+    footer p,
+    footer a {
+        font-size: 0.9rem;
+        line-height: 1.4;
+    }
 }
 
 
