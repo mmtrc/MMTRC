@@ -270,15 +270,15 @@ footer {
 }
 
 .doorTextWrapper .doorText {
-    font-size: 14px;
+    font-size: 12px;
     color: #694527;
     line-height: 1.4;
     position: absolute;
-    padding-top: 30px;
     bottom: -100px;
     right: -50px;
     z-index: 20;
 }
+
 
 .door:hover .doorTextWrapper .doorText {
     visibility: visible;
