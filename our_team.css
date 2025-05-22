@@ -194,27 +194,27 @@ footer {
 }
 
 /* Back Door Button */
+/* Back Door Button */
 .backDoor {
     position: fixed;
     top: 150px;
-    right: 7px; /* Small buffer from the right edge */
+    right: 0;
     z-index: 1000;
     transition: top 0.1s ease-out;
 }
 
-
 /* Door Style */
 .door {
     background: linear-gradient(to right, #fdb825, #fec940);
-    width: 120px;
-    height: 180px;
+    width: 90px;
+    height: 135px;
     border-radius: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
     color: #694527;
     font-weight: bold;
-    font-size: 14px;
+    font-size: 12px;
     text-align: center;
     border: 5px solid #694527;
     box-shadow: 3px 6px 15px rgba(0, 0, 0, 0.5);
@@ -227,8 +227,8 @@ footer {
 
 /* Window Style */
 .window {
-    width: 85px;
-    height: 60px;
+    width: 65px;
+    height: 35px;
     background: #694527;
     border-radius: 1px;
     position: absolute;
@@ -240,13 +240,13 @@ footer {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
     gap: 1px;
-    padding: 3px;
+    padding: 2px;
 }
 
-    .window div {
-        background-color: #fff;
-        border-radius: 3px;
-    }
+.window div {
+    background-color: #fff;
+    border-radius: 3px;
+}
 
 /* Glass Text Overlay */
 .door .glassEffect {
@@ -271,29 +271,31 @@ footer {
     gap: 10px;
     position: relative;
     flex-direction: row;
-    z-index: 10; /* Ensures the text stays above other elements */
+    z-index: 10;
 }
 
-    .doorTextWrapper .doorText {
-        font-size: 14px;
-        color: #694527;
-        line-height: 1.4;
-        position: absolute;
-        bottom: -55px; /* Adjust this value to move text down */
-        right: -50px;
-        z-index: 20; /* Ensure text stays on top */
-    }
+.doorTextWrapper .doorText {
+    min-height: 200px;
+    overflow: visible;
+    font-size: 12px;
+    color: #694527;
+    line-height: 1.4;
+    position: absolute;
+    bottom: -100px;
+    right: -50px;
+    z-index: 20;
+}
 
-/* Ensuring hover doesn't affect text visibility */
+
 .door:hover .doorTextWrapper .doorText {
-    visibility: visible; /* Keeps the text visible when hovered */
+    visibility: visible;
 }
 
 .door-handle {
     width: 15px;
     height: 15px;
-    background-color: #694527; /* color for the handle */
-    border-radius: 50%; /* This makes it a circle */
+    background-color: #694527;
+    border-radius: 50%;
     position: absolute;
     bottom: -25px;
     right: 50%;
