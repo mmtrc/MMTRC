@@ -201,15 +201,15 @@ footer {
 /* Door Style */
 .door {
     background: linear-gradient(to right, #fdb825, #fec940);
-    width: 120px;
-    height: 180px;
+    width: 90px;
+    height: 135px;
     border-radius: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
     color: #694527;
     font-weight: bold;
-    font-size: 14px;
+    font-size: 12px;
     text-align: center;
     border: 5px solid #694527;
     box-shadow: 3px 6px 15px rgba(0, 0, 0, 0.5);
@@ -222,8 +222,8 @@ footer {
 
 /* Window Style */
 .window {
-    width: 85px;
-    height: 60px;
+    width: 60px;
+    height: 45px;
     background: #694527;
     border-radius: 1px;
     position: absolute;
@@ -235,7 +235,7 @@ footer {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
     gap: 1px;
-    padding: 3px;
+    padding: 2px;
 }
 
 .window div {
@@ -274,7 +274,7 @@ footer {
     color: #694527;
     line-height: 1.4;
     position: absolute;
-    bottom: -55px;
+    bottom: -70px;
     right: -50px;
     z-index: 20;
 }
