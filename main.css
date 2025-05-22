@@ -109,7 +109,7 @@ nav a:hover,
 
 /* Main Content */
 .container {
-    width: 85%;
+    width: 100%;
     max-width: 900px;
     margin: 30px auto;
     background: #8b5e3b;
