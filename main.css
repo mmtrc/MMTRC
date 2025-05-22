@@ -109,8 +109,8 @@ nav a:hover,
 
 /* Main Content */
 .container {
-    width: 85%;
-    max-width: 900px;
+    width: 100%;
+    max-width: 950px;
     margin: 30px auto;
     background: #8b5e3b;
     color: #fef3c7;
@@ -364,7 +364,7 @@ footer {
         flex-direction: column;
         gap: 15px;
         padding: 10px 20px;
-        width: 110%;
+        width: 120%;
         box-sizing: border-box;
     }
 
