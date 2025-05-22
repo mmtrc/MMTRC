@@ -270,6 +270,8 @@ footer {
 }
 
 .doorTextWrapper .doorText {
+    min-height: 200px;
+    overflow: visible;
     font-size: 12px;
     color: #694527;
     line-height: 1.4;
