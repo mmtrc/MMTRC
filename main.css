@@ -349,7 +349,7 @@ footer {
 }
 @media (max-width: 768px) {
     header {
-        width: 100%;
+        width: 130%;
         margin: 0;
         left: 0;
         right: 0;
@@ -369,7 +369,7 @@ footer {
     }
 
     nav {
-        width: 100%;
+        width: 119%;
         margin: 0;
         left: 0;
         right: 0;
