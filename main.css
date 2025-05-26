@@ -344,14 +344,13 @@ footer {
 .khadja-content {
     background-color: #8b5e3b;
 }
-
 @media (max-width: 768px) {
     header {
-        flex-direction: column;
-        padding: 30px 39px;
-        font-size: 2rem;
-        height: auto;
-        text-align: center;
+        width: 100vw;            /* Force header to span full viewport width */
+        margin: 0;               /* Remove default margin */
+        box-sizing: border-box;  /* Prevent overflow from padding */
+        left: 0;
+        right: 0;
     }
 
     .trc-logo {
@@ -365,23 +364,16 @@ footer {
     }
 
     nav {
-        flex-direction: column;
-        gap: 15px;
-        padding: 10px 20px;
-        width: 100%;
+        width: 100vw;            /* Force nav to also span full viewport width */
+        margin: 0;
         box-sizing: border-box;
+        left: 0;
+        right: 0;
     }
-
-    nav a {
-        display: block;
-        padding: 12px 18px;
-        font-size: 1.1rem;
-        color: #fec940;
-        text-decoration: none;
-        border: 2px solid transparent;
-        border-radius: 5px;
-        width: auto;
+    body {
+        overflow-x: hidden;      /* Prevent horizontal scrolling from overflow */
     }
+   }
 
     .side-icons {
         display: none;
