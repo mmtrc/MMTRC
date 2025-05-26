@@ -15,6 +15,9 @@ html, body {
     margin-right: 5px;
     vertical-align: middle;
 }
+*, *::before, *::after {
+    box-sizing: inherit;
+}
 
 /* Header */
 header {
@@ -346,46 +349,44 @@ footer {
 }
 @media (max-width: 768px) {
     header {
-        width: 100vw;            /* Force header to span full viewport width */
-        margin: 0;               /* Remove default margin */
-        box-sizing: border-box;  /* Prevent overflow from padding */
+        width: 100%;
+        margin: 0;
         left: 0;
         right: 0;
+        position: relative;
     }
 
     .trc-logo {
         height: 180px;
         margin-bottom: 10px;
     }
-    
+
     .container {
-    max-width: 100%;
-    padding: 10px;
+        max-width: 100%;
+        width: 100%;
+        padding: 10px;
+        margin: 0;
     }
 
     nav {
-        width: 100vw;            /* Force nav to also span full viewport width */
+        width: 100%;
         margin: 0;
-        box-sizing: border-box;
         left: 0;
         right: 0;
+        position: relative;
     }
-    body {
-        overflow-x: hidden;      /* Prevent horizontal scrolling from overflow */
-    }
-   }
 
     .side-icons {
         display: none;
     }
 
     .backDoor {
-        top: 80px;         /* Move higher up if needed */
-        right: 35px;       /* Move in from the edge */
-        width: 70px;       /* Slightly smaller for mobile */
+        top: 80px;
+        right: 35px;
+        width: 70px;
         height: 100px;
-        z-index: 2000;     /* Ensure it's above everything */
-        display: block;    /* Make sure it's not accidentally hidden */
+        z-index: 2000;
+        display: block;
     }
 
     footer {
