@@ -358,12 +358,17 @@ footer {
         height: 180px;
         margin-bottom: 10px;
     }
+    
+    .container {
+    max-width: 100%;
+    padding: 10px;
+    }
 
     nav {
         flex-direction: column;
         gap: 15px;
         padding: 10px 20px;
-        width: 120%;
+        width: 100%;
         box-sizing: border-box;
     }
 
