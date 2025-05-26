@@ -391,6 +391,13 @@ footer {
         z-index: 2000;     /* Ensure it's above everything */
         display: block;    /* Make sure it's not accidentally hidden */
     }
+    .door {
+        width: 60px;
+        height: 80px;
+        padding: 5px;
+        font-size: 10px;
+    }
+
 
     footer {
         flex-direction: column;
