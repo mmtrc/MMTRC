@@ -385,7 +385,7 @@ footer {
 
     .backDoor {
         top: 80px;         /* Move higher up if needed */
-        right: 10px;       /* Move in from the edge */
+        right: 0px;       /* Move in from the edge */
         width: 70px;       /* Slightly smaller for mobile */
         height: 100px;
         z-index: 2000;     /* Ensure it's above everything */
