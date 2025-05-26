@@ -203,8 +203,8 @@ footer {
 /* Door Style */
 .door {
     background: linear-gradient(to right, #fdb825, #fec940);
-    width: 90px;
-    height: 135px;
+    width: 60px;
+    height: 107px;
     border-radius: 10px;
     display: flex;
     justify-content: center;
