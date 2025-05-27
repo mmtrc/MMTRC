@@ -407,4 +407,23 @@ footer {
         font-size: 0.9rem;
         line-height: 1.4;
     }
-}
+    .about-us,
+    .resources,
+    .need-help,
+    .volunteer-form,
+    .container,
+    #form-section {
+        text-align: center;
+    }
+
+    #needs-assessment-form,
+    #contact-form {
+        align-items: center;
+    }
+
+    #needs-assessment-form input,
+    #contact-form input,
+    #needs-assessment-form select,
+    #contact-form select {
+        text-align: center;
+    }
