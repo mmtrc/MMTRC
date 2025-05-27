@@ -349,7 +349,7 @@ footer {
 }
 @media (max-width: 768px) {
     header {
-        width: 130%;
+        width: 131%;
         margin: 0;
         left: 0;
         right: 0;
@@ -363,7 +363,7 @@ footer {
 
     .container {
         max-width: 100%;
-        width: 100%;
+        width: 125%;
         padding: 10px;
         margin: 0;
     }
