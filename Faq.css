@@ -31,9 +31,9 @@ header {
 
 /* Logo in Header */
 .trc-logo {
-    height: 100px; /* Adjust as needed */
-    max-height: 100px;
-    margin-right: 15px; /* space between logo and text */
+    height: 280px;
+    margin-right: 5px;
+    vertical-align: middle;
 }
 
 /* Navigation */
@@ -183,3 +183,4 @@ footer {
             font-size: 2rem;
         }
 }
+
