@@ -33,7 +33,10 @@ header {
     align-items: center;
     justify-content: center;
     height: 150px;
-    position: relative;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
     z-index: 9;
     width: 100%;
 }
@@ -425,5 +428,6 @@ footer {
     #contact-form select {
         text-align: center;
     }
+
 
 
