@@ -369,13 +369,18 @@ footer {
         margin: 0;
     }
 
-    nav {
-        width: 100%;
-        margin: 0;
-        left: 0;
-        right: 0;
-        position: relative;
-    }
+  nav {
+    display: flex;
+    justify-content: center; /* centers the items horizontally */
+    align-items: center;
+    gap: 20px;
+    background-color: #694527; /* dark brown */
+    padding: 12px 0;
+    flex-wrap: wrap;
+    font-family: inherit;
+    width: 100%;
+    margin: 0;
+}
 
     .side-icons {
         display: none;
