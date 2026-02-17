@@ -18,8 +18,6 @@ html, body {
 *, *::before, *::after {
     box-sizing: inherit;
 }
-
-/* Header */
 header {
     background: linear-gradient(135deg, #465f4b, #819d75);
     color: #fec940;
@@ -427,4 +425,5 @@ footer {
     #contact-form select {
         text-align: center;
     }
+
 
