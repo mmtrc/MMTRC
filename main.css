@@ -23,7 +23,7 @@ body {
 
 /* Logo */
 .trc-logo {
-  height: 210px;
+  height: 180px;
   margin-right: 5px;
   vertical-align: middle;
 }
@@ -403,6 +403,7 @@ footer {
     display: none;
   }
 }
+
 
 
 
