@@ -1,10 +1,11 @@
-html, body {
+body {
     font-family: 'Inter', sans-serif;
     background-color: #44321b;
     color: #fef3c7;
     margin: 0;
     padding: 0;
     text-align: center;
+    background-image: url('key-lock-pattern.svg');
     background-size: 80px 80px;
     background-repeat: repeat;
     background-attachment: fixed;
@@ -15,9 +16,8 @@ html, body {
     margin-right: 5px;
     vertical-align: middle;
 }
-*, *::before, *::after {
-    box-sizing: inherit;
-}
+
+/* Header */
 header {
     background: linear-gradient(135deg, #465f4b, #819d75);
     color: #fec940;
@@ -33,10 +33,7 @@ header {
     align-items: center;
     justify-content: center;
     height: 150px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
+    position: relative;
     z-index: 9;
     width: 100%;
 }
@@ -112,8 +109,8 @@ nav a:hover,
 
 /* Main Content */
 .container {
-    width: 100%;
-    max-width: 950px;
+    width: 85%;
+    max-width: 900px;
     margin: 30px auto;
     background: #8b5e3b;
     color: #fef3c7;
@@ -186,9 +183,11 @@ nav a:hover,
 footer {
     text-align: center;
     padding: 15px 0;
+    background: #694527;
     color: #fec940;
     font-size: 1rem;
     margin-top: 30px;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
     font-family: 'Inter', sans-serif;
 }
 
@@ -204,15 +203,15 @@ footer {
 /* Door Style */
 .door {
     background: linear-gradient(to right, #fdb825, #fec940);
-    width: 60px;
-    height: 107px;
+    width: 120px;
+    height: 180px;
     border-radius: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
     color: #694527;
     font-weight: bold;
-    font-size: 12px;
+    font-size: 14px;
     text-align: center;
     border: 5px solid #694527;
     box-shadow: 3px 6px 15px rgba(0, 0, 0, 0.5);
@@ -225,8 +224,8 @@ footer {
 
 /* Window Style */
 .window {
-    width: 65px;
-    height: 35px;
+    width: 85px;
+    height: 60px;
     background: #694527;
     border-radius: 1px;
     position: absolute;
@@ -238,7 +237,7 @@ footer {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
     gap: 1px;
-    padding: 2px;
+    padding: 3px;
 }
 
 .window div {
@@ -273,17 +272,14 @@ footer {
 }
 
 .doorTextWrapper .doorText {
-    min-height: 200px;
-    overflow: visible;
-    font-size: 12px;
+    font-size: 14px;
     color: #694527;
     line-height: 1.4;
     position: absolute;
-    bottom: -100px;
+    bottom: -55px;
     right: -50px;
     z-index: 20;
 }
-
 
 .door:hover .doorTextWrapper .doorText {
     visibility: visible;
@@ -348,13 +344,15 @@ footer {
 .khadja-content {
     background-color: #8b5e3b;
 }
+
+/* Responsive Mobile Styles */
 @media (max-width: 768px) {
     header {
-        width: 100%;
-        margin: 0;
-        left: 0;
-        right: 0;
-        position: relative;
+        flex-direction: column;
+        padding: 30px 20px;
+        font-size: 2rem;
+        height: auto;
+        text-align: center;
     }
 
     .trc-logo {
@@ -362,77 +360,51 @@ footer {
         margin-bottom: 10px;
     }
 
-    .container {
-        max-width: 100%;
-        width: 100%;
-        padding: 10px;
-        margin: 0;
+    nav {
+        flex-direction: column;
+        gap: 15px;
+        padding: 10px 20px;
+        width: 110%;
+        box-sizing: border-box;
     }
 
-  nav {
-    display: flex;
-    justify-content: center; /* centers the items horizontally */
-    align-items: center;
-    gap: 20px;
-    background-color: #694527; /* dark brown */
-    padding: 12px 0;
-    flex-wrap: wrap;
-    font-family: inherit;
-    width: 100%;
-    margin: 0;
-}
+    nav a {
+        display: block;
+        padding: 12px 18px;
+        font-size: 1.1rem;
+        color: #fec940;
+        text-decoration: none;
+        border: 2px solid transparent;
+        border-radius: 5px;
+        width: auto; /* keep this so it hugs content */
+    }
+
+    .side-icons {
+        position: fixed;
+        top: 120px;
+        right: 10px;
+        z-index: 900;
+        pointer-events: all; /* Ensure it's clickable */
+        opacity: 1; /* Make sure it's fully visible */
+    }
+
+
+    }
+
+    .backDoor {
+        top: 100px;
+        right: 10px;
+    }
 
     .side-icons {
         display: none;
     }
 
-    .backDoor {
-        top: 80px;
-        right: 35px;
-        width: 70px;
-        height: 100px;
-        z-index: 2000;
-        display: block;
+    .side-icons {
+        display: none;
     }
+}
 
-    footer {
-        flex-direction: column;
-        text-align: right;
-        padding: 0px 0px;
-        font-size: 1rem;
-    }
-
-    footer .footer-links {
-        flex-direction: column;
-        gap: 10px;
-        margin-top: 10px;
-    }
-
-    footer p,
-    footer a {
-        font-size: 0.9rem;
-        line-height: 1.4;
-    }
-    .about-us,
-    .resources,
-    .need-help,
-    .volunteer-form,
-    .container,
-    #form-section {
-        text-align: center;
-    }
-
-    #needs-assessment-form,
-    #contact-form {
-        align-items: center;
-    }
-
-    #needs-assessment-form input,
-    #contact-form input,
-    #needs-assessment-form select,
-    #contact-form select {
-        text-align: center;
-    }
 
 
 
